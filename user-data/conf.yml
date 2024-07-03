@@ -11,9 +11,10 @@ sections:
   - name: CVE
     widgets:
       - type: cve-vulnerabilities
+        id: 0_222_cvevulnerabilities
     filteredItems: []
-  - name: Getting Started
-    icon: fas fa-rocket
+  - name: Tools
+    icon: fas fa-hammer
     items:
       - &ref_0
         title: Dashy Live
@@ -21,38 +22,44 @@ sections:
         icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
         url: https://live.dashy.to/
         target: newtab
-        id: 0_1481_dashylive
+        id: 0_529_dashylive
       - &ref_1
         title: GitHub
         description: Source Code, Issues and Pull Requests
         url: https://github.com/lissy93/dashy
         icon: favicon
-        id: 1_1481_github
+        id: 1_529_github
       - &ref_2
         title: Docs
         description: Configuring & Usage Documentation
         provider: Dashy.to
         icon: far fa-book
         url: https://dashy.to/docs
-        id: 2_1481_docs
+        id: 2_529_docs
       - &ref_3
         title: Showcase
         description: See how others are using Dashy
         url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
         icon: far fa-grin-hearts
-        id: 3_1481_showcase
+        id: 3_529_showcase
       - &ref_4
         title: Config Guide
         description: See full list of configuration options
         url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
         icon: fas fa-wrench
-        id: 4_1481_configguide
+        id: 4_529_configguide
       - &ref_5
         title: Support
         description: Get help with Dashy, raise a bug, or get in contact
         url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
         icon: far fa-hands-helping
-        id: 5_1481_support
+        id: 5_529_support
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
     filteredItems:
       - *ref_0
       - *ref_1
@@ -96,7 +103,7 @@ sections:
       - &ref_8
         title: Ozon
         description: Ozon
-        icon: favicon
+        icon: fas fa-circle
         url: https://www.ozon.ru/
         target: newtab
         hotkey: 1
@@ -104,25 +111,57 @@ sections:
       - &ref_9
         title: Yam
         description: Yam
-        icon: favicon
+        icon: fas fa-sun
         url: https://market.yandex.ru/
         id: 1_238_yam
       - &ref_10
         title: ASR
         description: ASR
-        icon: favicon
+        icon: fas fa-sword
         url: https://airsoft-rus.ru/
         target: newtab
         id: 2_238_asr
+      - &ref_11
+        title: Pepper
+        description: Pepper
+        icon: fas fa-fire
+        url: https://www.pepper.ru/
+        target: newtab
+        id: 3_238_pepper
     filteredItems:
       - *ref_8
       - *ref_9
       - *ref_10
+      - *ref_11
   - name: Today
     icon: far fa-calendar-day
     widgets:
       - type: public-ip
+        id: 0_513_publicip
       - type: clock
         options:
           format: en-GB
+        id: 1_513_clock
+    filteredItems: []
+  - name: NWS
+    widgets:
+      - type: hackernews-trending
+        options:
+          stories: newstories
+          limit: 4
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 3
+      collapsed: false
+      hideForGuests: false
+    icon: fas fa-newspaper
+    filteredItems: []
+  - name: POGODA
+    widgets:
+      - type: weather-forecast
+        options:
+          apiKey: 4cfd858350f3d254c22da58b7bf00a8f
+          city: Orenburg, RU
+        id: 0_855_weatherforecast
     filteredItems: []
